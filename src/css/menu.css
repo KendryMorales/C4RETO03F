@@ -1,0 +1,48 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.menu_link:hover{
+    color: #ae88f3 !important;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 1.4ms;
+}
+
+.nav_icon{
+width: 60px;
+height: 40px;
+}
+
+.icon{
+    display: inline-block;
+    width: 50px;
+    height: 40px;
+    color: #fff;
+    font-size: 25px;
+    /* background: #ae88f3; */
+    background: #007BFF;
+    text-align: center;
+    border-radius: 5px;
+    padding: 8px 0;
+    margin: auto;
+}
+
+.menu_link1:hover{
+    color: #fff !important;
+    cursor: pointer;
+    font-weight: 600;
+    transition: 1.4ms;
+    background: #ae88f3;
+}
+
+.icon1{
+    display: inline-block;
+    color: #007BFF;
+    font-size: 25px;
+    text-align: right;
+    margin: auto;
+    font-size: 40px;
+}

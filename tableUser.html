@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="icon" href="src/img/kickstarter-brands.svg" type="image">
+    <title>Registrar Usuario</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light  shadow-sm mb-5">
+            <div class="container-fluid">
+                <div class="navbar-brand me-2 ms-5">
+                    <a class="nav-link menu_link1 fas fa-dumbbell icon" href="welcome.html"></a>
+                </div>
+                <div class="collapse navbar-collapse d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-2">
+                        <li class="nav-item d-none d-md-block ">
+                            <span class="nav-link">Cangrejo</span>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center me-5">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user me-2"></i>
+                                    <span class="fw-normal">Usuario: <span id="resultado"></span></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="menu_product"><a class="dropdown-item" href="product.html">Producto</a></li>
+                                    <li id="menu_user"><a class="dropdown-item" href="user.html">Usuario</a></li>
+                                    <li id="menu_order"><a class="dropdown-item" href="order.html">Ordenes</a></li>
+                                    <li id="menu_tabUser"><a class="dropdown-item" href="tableUser.html">Listado de usuario</a></li>
+                                    <li id="menu_tabProduct"><a class="dropdown-item" href="tableProduct.html">Listado de productos</a></li>
+                                    <li id="menu_tabOrder"><a class="dropdown-item" href="tableOrder.html">Listado de ordenes</a></li>
+                                    <li><a id="cerrarSession" class="dropdown-item" href="#">Salir</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container_box1 table_user">
+            <h3 class="text-center fw-normal">Tabla de usuarios</h3>
+            <div class="row container-fluid">
+                <div class="col-12 mt-5 form_box ">
+                    <div class="col-11 table_scroll">
+                        <table id="list" class="table table-responsive table-hover table-sm">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="container_box1 form_user">
+            <div class="row container-fluid">
+                <div class="col-lg-7 col-md-7 d-none d-md-block img_box">
+                    <img src="src/img/registro.svg" alt="imagen registro" class="img-fluid rounded mx-auto d-block">
+                </div>
+
+                <div id="formUser" class="col-lg-5 col-md-5 col-12 form_box">
+                    <form class="col-lg-12 col-md-12 col-10 form needs-validation" novalidate>
+                        <h3 class="text-center title_user">Registro de usuario</h3>
+                        <div class="form-group mb-3 mt-5">
+                            <label for="identUser" class="form-label">Numero de identidad</label><br />
+                            <input type="number" name="identUser" id="identUser" class="form-control" required />
+                            <div id="msg_identidad" class="invalid-feedback">Por favor, digite su numero de identidad
+                            </div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="nameUser" class="form-label">Nombre</label><br />
+                            <input type="nameUser" name="nameUser" id="nameUser" class="form-control" maxlength="80"
+                                required />
+                            <div id="msg_nombre" class="invalid-feedback">Por favor, digite su nombre</div>
+                            <div id="msg_nombre1" class="msg"></div>
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="addressUser" class="form-label">Direccion</label><br />
+                            <input type="text" name="addressUser" id="addressUser" class="form-control" required />
+                            <div id="msg_address" class="invalid-feedback">Por favor, digite su direccion</div>
+                        </div>
+                        <div class="form-group mb-3 mt-3">
+                            <label for="cellPhone" class="form-label">Telefono</label><br />
+                            <input type="tel" name="cellPhone" id="cellPhoneUser" class="form-control" required />
+                            <div id="msg_cellPhone" class="invalid-feedback">Por favor, digite su telefono</div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="useremail" class="form-label">Email</label><br />
+                            <input type="email" name="useremail" id="emailUser" class="form-control" maxlength="50"
+                                required />
+                            <div id="msg_email" class="invalid-feedback">Digite su correo</div>
+                            <div id="msg_email1" class="msg"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">Contraseña</label><br />
+                            <input type="password" name="password" id="passwordUser" class="form-control" maxlength="50"
+                                required />
+                            <div id="msg_pass" class="invalid-feedback">
+                                Digite su contraseña
+                            </div>
+                            <div id="msg_pass01" class="msg"></div>
+                        </div>
+                        <div class="form-group mb-3">
+                            <label for="password" class="form-label">Confirme la contraseña</label><br />
+                            <input type="password" name="passwordrepeatUser" id="passwordrepeatUser" class="form-control"
+                                maxlength="50" required />
+                            <div id="msg_pass1" class="invalid-feedback">
+                                Repita la contraseña
+                            </div>
+                            <div id="msg_pass02" class="msg"></div>
+                        </div>
+                        <!-- <div class="form-group mb-3">
+                            <label for="zoneUser" class="form-label">Zona</label><br />
+                            <input type="text" name="zoneUser" id="zoneUser" class="form-control" maxlength="50"
+                                required />
+                            <div id="msg_zoneUser" class="invalid-feedback">
+                                Por favor, digite su zona
+                            </div>
+                        </div> -->
+                        <div class="form-group form-group mb-4">
+                            <label for="zoneUser" class="form-label">Zona</label><br />
+                            <select name="zoneUser" id="zoneUser" class="form-control form-select" required>
+                                <option selected value="">Seleccione la zona</option>
+                                <option value="ZONA 1">Zona 1</option>
+                                <option value="ZONA 2">Zona 2</option>
+                            </select>
+                            <div id="msg_zoneUser" class="invalid-feedback">
+                                Seleccione la zona
+                            </div>
+                        </div>
+                        <div class="form-group form-group mb-4">
+                            <label for="typeUser" class="form-label">Tipo de usuario</label><br>
+                            <select name="typeUser" id="typeUser" class="form-control form-select" required>
+                                <option selected value="">Selecciona el tipo de usuario</option>
+                                <option value="COORD">Coordinador de zona</option>
+                                <option value="ASE">Asesor Comercial</option>
+                                <option value="ADM">Administrador</option>
+                            </select>
+                            <div id="msg_typrUser" class="invalid-feedback">
+                                Seleccione el tipo de usuario
+                            </div>
+                        </div>
+                        <div id="addbtn" class="d-flex gap-2 row form-group justify-content-center mb-3">
+                            <!-- <input type="submit" class="btn btn-primary mb-3 btn-block col-5 btn_new btn_register"
+                                onclick="register()" value="Crear" /> -->
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/311bf9938d.js" crossorigin="anonymous"></script>
+    <script src="src/js/tableUser.js"></script>
+    <script src="src/js/valUser.js"></script>
+    <script src="src/js/welcome.js"></script>
+</body>
+
+</html>

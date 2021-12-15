@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="src/css/menu.css">
+    <link rel="stylesheet" href="src/css/style.css">
+    <link rel="icon" href="src/img/kickstarter-brands.svg" type="image">
+    <title>Order ASE</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand navbar-light shadow-sm mb-5">
+            <div class="container-fluid">
+                <div class="navbar-brand me-2 ms-5">
+                    <a class="nav-link menu_link1 fas fa-dumbbell icon" href="welcome.html"></a>
+                </div>
+                <div class="collapse navbar-collapse d-flex align-items-center">
+                    <ul class="navbar-nav me-auto mb-2">
+                        <li class="nav-item d-none d-md-block ">
+                            <span class="nav-link">Cangrejo</span>
+                        </li>
+                    </ul>
+                    <div class="d-flex align-items-center me-3">
+                        <ul class="navbar-nav">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">
+                                    <i class="fas fa-user me-"></i>
+                                    <span class="fw-normal">Usuario: <span id="resultado"></span></span>
+                                </a>
+                                <ul class="dropdown-menu">
+                                    <li id="menu_product"><a class="dropdown-item" href="product.html">Producto</a></li>
+                                    <li id="menu_user"><a class="dropdown-item" href="user.html">Usuario</a></li>
+                                    <li id="menu_order"><a class="dropdown-item" href="order.html">Ordenes</a></li>
+                                    <li id="menu_tabUser"><a class="dropdown-item" href="tableUser.html">Listado de
+                                            usuario</a></li>
+                                    <li id="menu_tabProduct"><a class="dropdown-item" href="tableProduct.html">Listado
+                                            de productos</a></li>
+                                    <li id="menu_tabOrder"><a class="dropdown-item" href="tableOrder.html">Listado de
+                                            ordenes</a></li>
+                                    <li><a id="cerrarSession" class="dropdown-item" href="#">Salir</a></li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="container_box1 table_product">
+            <div class="container-fluid mt-3">
+                <h3 class="text-center fw-normal">Solicitud de productos</h3>
+                <div class="mt-5 form_box">
+                    <div class="table table-responsive">
+                        <table id="list" class="table table-hover">
+
+                        </table>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="container_box1 table_product mt-5">
+            <div class="container-fluid">
+                <h3 class="text-center fw-normal">Orden de compra</h3>
+                <div class="mt-5 form_box col-8">
+                    <div class="table table-responsive table-bordered">
+                        <table id="pedido1" class="table table-responsive table-bordered"></table>
+                        <table id="pedido" class="table table-hover">
+
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 text-center">
+                <button class="btn btn-primary" id="procesarOrden" onclick="procesarOrden()">Guardar orden</button>
+                <button class="btn btn-secondary" id="limpiar" onclick="limpiar()">Limpiar orden</button>
+            </div>
+        </section>
+
+        <section class="container_box1 table_product mt-5">
+            <div class="container-fluid">
+                <h3 class="text-center fw-normal">Ordenes procesadas</h3>
+                <div class="mt-5 form_box col-12">
+                    <div class="table table-responsive ">
+                        <table id="guardadas" class="table table-hover table-borderless">
+                        </table>
+                        <br><br>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container_box1 table_product mt-5 mb-5">
+            <div class="container-fluid">
+                <div class="mt-5 form_box col-8">
+                    <div class="table table-responsive table-borderless">
+                        <table id="orden" class="table table-hover ">
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/311bf9938d.js" crossorigin="anonymous"></script>
+    <script src="src/js/order1.js"></script>
+    <script src="src/js/welcome.js"></script>
+    <script src="src/js/order.js"></script>
+</body>
+
+</html>

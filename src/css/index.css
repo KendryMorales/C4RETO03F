@@ -1,0 +1,10 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+.container_box{
+    width: 90%;
+    height: auto;
+    margin: auto;
+}
